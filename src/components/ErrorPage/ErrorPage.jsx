@@ -1,8 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { useNavigate, useRouteError } from 'react-router-dom';
+import { useNavigate, useNavigation, useRouteError } from 'react-router-dom';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 const ErrorPage = () => {
+  
+  const navigation = useNavigation()
+  {navigation.state === 'loading' ? <LoadingPage></LoadingPage> : ''}
+
   const error = useRouteError();
   const navigate = useNavigate();
   const backBtn = () => {

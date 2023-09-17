@@ -3,6 +3,7 @@ import React from 'react';
 import './AboutUs.css';
 
 const AboutUs = () => {
+  
   return (
     <div>
       <div className='container mx-auto text-center md:py-10'>

@@ -1,9 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigation } from 'react-router-dom';
+import LoadingPage from './../LoadingPage/LoadingPage';
 
 const Book = ({book}) => {
+  const navigation = useNavigation();
+  {navigation.state === 'loading' ? <LoadingPage></LoadingPage> : ''}
+  
   const {isbn13,image,subtitle,price,title} = book;
+
   return (
     <Link to={`/book/${isbn13}`}>
       <div className='overflow-hidden relative hover:shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-2 ease-in duration-500'>

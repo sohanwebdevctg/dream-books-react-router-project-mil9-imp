@@ -3,8 +3,12 @@ import React from 'react';
 import './Home.css';
 import Lottie from "lottie-react";
 import Reading from "../../assets/reading.json";
+import { useNavigation } from 'react-router-dom';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 const Home = () => {
+  const navigation = useNavigation()
+  {navigation.state === 'loading' ? <LoadingPage></LoadingPage> : ''}
   return (
     <div>
       <div className='grid grid-cols-1 gap-2 md:grid-cols-2 container mx-auto md:items-center md:py-10'>

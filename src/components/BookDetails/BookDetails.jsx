@@ -1,9 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import './BookDetails.css';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate, useNavigation } from 'react-router-dom';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 const BookDetails = () => {
+  const navigation = useNavigation()
+  {navigation.state === 'loading' ? <LoadingPage></LoadingPage> : ''}
+
   const bookDetails = useLoaderData();
   const {image,desc,publisher,authors,year,title,price,rating} = bookDetails;
 
