@@ -34,9 +34,10 @@ const BookDetails = () => {
               showData ? (<span className='text-gray-400 font-bold' onClick={()=> setShowData(false)}>...Read Less</span>) : (<span className='text-gray-400 font-bold' onClick={()=> setShowData(true)}>Read More...</span>)
             }
           </p>
-          <div>
-            
-          </div>
+          <div className='mt-5 flex gap-3'>
+          <span className='bg-gray-500 text-blue-800 py-3 px-5 font-bold rounded-md hover:bg-yellow-500 hover:text-slate-100 duration-300'>Buy Now</span>
+          <span className='border-2 border-yellow-500 text-gray-500 py-3 px-5 font-bold rounded-md hover:bg-gray-500 hover:text-yellow-400 hover:border-gray-500 duration-300 '>Visit Store</span>
+        </div>
         </div>
       </div>
     </div>
