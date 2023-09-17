@@ -1,14 +1,19 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import './BookDetails.css';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const BookDetails = () => {
   const bookDetails = useLoaderData();
-  console.log(bookDetails)
   const {image,desc,publisher,authors,year,title,price,rating} = bookDetails;
 
   const [showData, setShowData] = useState(false);
+
+  const navigate =  useNavigate();
+
+  const previousBtn = () => {
+    navigate(-1)
+  }
 
 
   return (
@@ -25,8 +30,8 @@ const BookDetails = () => {
           <p className='text-lg text-white font-bold my-1'>Publisher : <span className='text-gray-400'>{publisher ? publisher : 'No-Data'}</span></p>
           <p className='text-lg text-white font-bold my-1'>Year : <span className='text-gray-400'>{year ? year : 'No-Data'}</span></p>
           <p className='text-lg text-white font-bold my-1'>Rating : <span className='text-gray-400'>{rating ? rating : '00'}</span></p>
+          <p className='text-lg text-white font-bold my-1'>Price : <span className='text-gray-400'>{price ? price : '00'}</span></p>
           <p className='text-yellow-400'>
-            
               {
               desc.slice(0, showData ? 420 : 100)
               }&nbsp;
@@ -34,9 +39,10 @@ const BookDetails = () => {
               showData ? (<span className='text-gray-400 font-bold' onClick={()=> setShowData(false)}>...Read Less</span>) : (<span className='text-gray-400 font-bold' onClick={()=> setShowData(true)}>Read More...</span>)
             }
           </p>
-          <div className='mt-5 flex gap-3'>
+          <div className='mt-5 flex gap-1'>
           <span className='bg-gray-500 text-blue-800 py-3 px-5 font-bold rounded-md hover:bg-yellow-500 hover:text-slate-100 duration-300'>Buy Now</span>
-          <span className='border-2 border-yellow-500 text-gray-500 py-3 px-5 font-bold rounded-md hover:bg-gray-500 hover:text-yellow-400 hover:border-gray-500 duration-300 '>Visit Store</span>
+          <span onClick={previousBtn} className='bg-yellow-500 text-slate-100 py-3 px-5 font-bold rounded-md duration-300'>Previous</span>
+          
         </div>
         </div>
       </div>
