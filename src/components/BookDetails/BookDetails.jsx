@@ -6,7 +6,7 @@ import { useLoaderData } from 'react-router-dom';
 const BookDetails = () => {
   const bookDetails = useLoaderData();
   console.log(bookDetails);
-  const {image,desc,publisher,authors,year} = bookDetails;
+  const {image,desc,publisher,authors,year,title,price} = bookDetails;
   return (
     <div>
       <h1 className='text-white'>hello world</h1>
