@@ -11,11 +11,13 @@ import Home from './components/Home/Home';
 import Books from './components/Books/Books';
 import AboutUs from './components/AboutUs/AboutUs';
 import BookDetails from './components/BookDetails/BookDetails';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path : '/',
     element : <Root></Root>,
+    errorElement : <ErrorPage></ErrorPage>,
     children : [
       {
         path : '/',
@@ -34,10 +36,6 @@ const router = createBrowserRouter([
       {
         path : '/aboutUs',
         element : <AboutUs></AboutUs>
-      },
-      {
-        path : '*',
-        element : <div>No page found</div>
       }
     ]
   }
