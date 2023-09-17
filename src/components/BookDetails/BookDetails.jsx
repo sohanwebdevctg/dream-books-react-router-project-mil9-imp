@@ -15,7 +15,6 @@ const BookDetails = () => {
     navigate(-1)
   }
 
-
   return (
     <div className='p-20'>
       <div className='grid grid-cols-1 md:grid-cols-2 p-10 border-2 border-solid border-blue-800'>
