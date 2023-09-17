@@ -12,6 +12,7 @@ import Books from './components/Books/Books';
 import AboutUs from './components/AboutUs/AboutUs';
 import BookDetails from './components/BookDetails/BookDetails';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import LoadingPage from './components/LoadingPage/LoadingPage';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path : '/aboutUs',
         element : <AboutUs></AboutUs>
+      },
+      {
+        path : '/loading',
+        element : <LoadingPage></LoadingPage>
       }
     ]
   }
