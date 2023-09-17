@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import './BookDetails.css';
 import { useLoaderData, useNavigate, useNavigation } from 'react-router-dom';
 import LoadingPage from '../LoadingPage/LoadingPage';
+import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid'
+
 
 const BookDetails = () => {
   const navigation = useNavigation()
@@ -44,7 +46,7 @@ const BookDetails = () => {
           </p>
           <div className='mt-5 flex gap-1'>
           <span className='bg-gray-500 text-blue-800 py-3 px-5 font-bold rounded-md hover:bg-yellow-500 hover:text-slate-100 duration-300'>Buy Now</span>
-          <span onClick={previousBtn} className='bg-yellow-500 text-slate-100 py-3 px-5 font-bold rounded-md duration-300'>Previous</span>
+          <span onClick={previousBtn} className='bg-yellow-500 text-slate-100 py-3 px-5 font-bold rounded-md duration-300 flex items-center'><ArrowLeftOnRectangleIcon className="h-5 w-5 font-bold text-slate-100" />Previous</span>
           
         </div>
         </div>

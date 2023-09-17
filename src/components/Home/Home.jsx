@@ -5,6 +5,8 @@ import Lottie from "lottie-react";
 import Reading from "../../assets/reading.json";
 import { useNavigation } from 'react-router-dom';
 import LoadingPage from '../LoadingPage/LoadingPage';
+import { LinkIcon } from '@heroicons/react/24/solid';
+
 
 const Home = () => {
   const navigation = useNavigation()
@@ -17,7 +19,7 @@ const Home = () => {
         <p className='text-slate-300 text-5xl font-normal my-2'>A reader <br></br>lives a thousand<br></br><span className='text-blue-800'>lives before he dies</span></p>
         <p className='text-slate-300 text-xl'>Books are uniquely portable magic. Books server to show a<br></br>man that those original thoughts of his are not very new after<br></br>all.The man who does not read good books is no better than<br></br>the man who can not.</p>
         <div className='mt-5 flex gap-3'>
-          <span className='bg-blue-800 text-gray-500 py-3 px-5 font-bold rounded-md hover:bg-slate-500 hover:text-blue-800 duration-300'>Visit Store</span>
+          <span className='bg-blue-800 text-gray-500 py-3 px-5 font-bold rounded-md hover:bg-slate-500 hover:text-blue-800 duration-300 flex items-center gap-1'><LinkIcon className="h-4 w-4 text-gray-500" />Visit Store</span>
           <span className='border-2 border-gray-500 text-blue-500 py-3 px-5 font-bold rounded-md hover:bg-blue-500 hover:text-gray-400 hover:border-blue-500 duration-300'>Visit Store</span>
         </div>
       </div>
