@@ -6,7 +6,8 @@ import { BoltIcon } from '@heroicons/react/24/solid'
 
 const Header = () => {
   return (
-    <div className='bg-gray-500'>
+    <div>
+      <div className='bg-gray-500 hidden md:block'>
       <nav className='container mx-auto flex justify-between items-center h-16'>
         <div>
           <Link to="/">
@@ -19,6 +20,7 @@ const Header = () => {
           <NavLink to='/aboutUs' className={({isActive}) => (isActive ? 'text-blue-700 text-xl font-semibold' : 'text-white text-xl font-semibold')}>AboutUs</NavLink>
         </div>
       </nav>
+      </div>
     </div>
   );
 };
