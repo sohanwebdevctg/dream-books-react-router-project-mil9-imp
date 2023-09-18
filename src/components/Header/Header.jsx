@@ -8,6 +8,7 @@ const Header = () => {
   const [open, setOpen]  =useState(false);
   return (
     <div>
+        {/* desktop section start */}
       <div className='bg-gray-500 hidden md:block'>
         <nav className='md:container md:mx-auto md:flex md:justify-between md:items-center h-16'>
           <div>
@@ -22,6 +23,8 @@ const Header = () => {
           </div>
         </nav>
       </div>
+      {/* desktop section end */}
+      {/* mobile section start */}
       <div className='bg-gray-500 md:hidden'>
         <nav>
           <div className='flex justify-between items-center h-12 px-2'>
@@ -43,6 +46,7 @@ const Header = () => {
           </div>
         </nav>
       </div>
+      {/* mobile section end */}
     </div>
   );
 };
